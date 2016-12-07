@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+    defaultConfig {
+        applicationId "com.example.zm.myapplication"
+        minSdkVersion 16
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    testCompile 'junit:junit:4.12'
+    //toolBar标题栏依赖
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    //AppBarLayout控件使用依赖
+    compile 'com.android.support:design:23.3.0'
+    //okhttp的封装，retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    //retrofit的Gson解析
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile files('libs/fastjson-1.2.6.jar')
+    //v13包-----FragmentPagerAdapter
+    compile 'com.android.support:support-v13:23.3.0'
+
+    compile 'com.android.support:recyclerview-v7:23.3.0'
+    compile 'com.squareup.okhttp3:okhttp:3.4.2'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    //MPChart图表开源库
+    compile 'com.github.PhilJay:MPAndroidChart:v2.2.4'
+
+
+
+    compile 'com.zhy:percent-support-extends:1.1.1'
+    compile 'com.android.support:percent:22.2.0'
+
+
+    /**
+     * 配置注意，在build文件中添加
+     * allprojects {
+     repositories {
+     jcenter()
+     ---maven { url "https://jitpack.io" }---
+     }
+     }
+     */
+    //嵌套滑动中用到了
+    compile 'com.zhy:base-adapter:2.0.0'
+}
