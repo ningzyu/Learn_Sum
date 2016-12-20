@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!--标题-->
+    <android.support.v7.widget.Toolbar
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:id="@+id/tool_bar"
+        android:visibility="gone"
+        android:title=""
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFF"
+            android:textSize="12sp"
+            android:layout_margin="10dp"
+            android:layout_gravity="right"
+            android:id="@+id/toolbar_right" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_margin="10dp"
+            android:textColor="#FFF"
+            android:layout_gravity="left"
+            android:id="@+id/toolbar_left" />
+    </android.support.v7.widget.Toolbar>
+</LinearLayout>
