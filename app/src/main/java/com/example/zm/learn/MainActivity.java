@@ -1,4 +1,4 @@
-package com.example.zm.myapplication;
+package com.example.zm.learn;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,7 +11,16 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.example.zm.myapplication.base.BaseActivity;
+import com.example.zm.learn.base.BaseActivity;
+import com.example.zm.learn.ui.Activity01;
+import com.example.zm.learn.ui.Activity02;
+import com.example.zm.learn.ui.Activity03;
+import com.example.zm.learn.ui.Activity04;
+import com.example.zm.learn.ui.Activity05;
+import com.example.zm.learn.ui.Activity06;
+import com.example.zm.learn.ui.Activity07;
+import com.example.zm.learn.ui.Activity08;
+import com.example.zm.learn.ui.Activity09;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,19 +42,19 @@ public class MainActivity  extends BaseActivity {
     }
 
     private void ddd() {
-//        initData("通知栏",new Activity01());
-//        initData("ListView头部悬浮效果",new Activity02());
-//        initData("MPChart图表开源库1",new Activity03());
-//        initData("MPChart图表开源库2",new Activity04());
-//        initData("实用小组件",new Activity05());
-//        initData("购物车",new Activity06());
-//        initData("网上的全选全部选",new Activity07());
-//        initData("Gson解析",new Activity08());
-//        initData("Recycler使用",new Activity09());
-//        initData("Fragment管理",new Activity10());
-//        initData("嵌套滑动",new Activity11());
-//        initData("阿姨帮分类页",new Activity12());
-//        initData("阿姨帮分类页",new Activity13());
+        initData("",new Activity01());
+        initData("",new Activity02());
+        initData("",new Activity03());
+        initData("",new Activity04());
+        initData("",new Activity05());
+        initData("",new Activity06());
+        initData("",new Activity07());
+        initData("",new Activity08());
+        initData("",new Activity09());
+//        initData("",new Activity10());
+//        initData("",new Activity11());
+//        initData("",new Activity12());
+//        initData("",new Activity13());
     }
 
     private void initData(String s,Activity a) {

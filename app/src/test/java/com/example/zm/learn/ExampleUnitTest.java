@@ -1,4 +1,4 @@
-package com.example.zm.myapplication;
+package com.example.zm.learn;
 
 import org.junit.Test;
 

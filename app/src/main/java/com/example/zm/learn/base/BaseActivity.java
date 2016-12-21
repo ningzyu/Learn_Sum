@@ -1,24 +1,25 @@
-package com.example.zm.myapplication.base;
+package com.example.zm.learn.base;
 
-import android.app.Fragment;
 import android.app.ProgressDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.zm.myapplication.R;
+import com.example.zm.learn.R;
 
 
 /**
- * Created by zm on 2016/11/22.
+ * 重写Activity
+ * 实现标题栏与加载条
  */
 
-public class BaseFragment extends Fragment {
+public abstract class BaseActivity extends AppCompatActivity {
     private ProgressDialog mProgressDialog;
     protected Toolbar mToolbar;
 
-    public void initToolBar(View view,String title, boolean canBack) {
-        mToolbar = (Toolbar) view.findViewById(R.id.tool_bar);
+    public void initToolBar(String title, boolean canBack) {
+        mToolbar = (Toolbar) findViewById(R.id.tool_bar);
         if (mToolbar != null) {
             mToolbar.setVisibility(View.VISIBLE);
             mToolbar.setBackgroundResource(R.color.colorPrimary);
@@ -31,7 +32,7 @@ public class BaseFragment extends Fragment {
                 mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        getActivity().onBackPressed();
+                        onBackPressed();
                     }
                 });
             }
@@ -44,7 +45,7 @@ public class BaseFragment extends Fragment {
             message = "加载中...";
         }
         if (mProgressDialog == null) {
-            mProgressDialog = new ProgressDialog(getActivity());
+            mProgressDialog = new ProgressDialog(this);
             mProgressDialog.setIndeterminate(true);
             mProgressDialog.setMessage(message);
             mProgressDialog.setCanceledOnTouchOutside(false);
@@ -58,4 +59,6 @@ public class BaseFragment extends Fragment {
             mProgressDialog = null;
         }
     }
+
+
 }
