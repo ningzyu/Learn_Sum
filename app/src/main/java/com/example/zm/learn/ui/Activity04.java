@@ -11,10 +11,11 @@ import android.view.Menu;
 import android.widget.SimpleAdapter;
 
 import com.example.zm.learn.R;
+import com.example.zm.learn.base.BaseActivity;
 import com.example.zm.learn.ulit.RefreshListView;
 import com.example.zm.learn.ulit.RefreshListView.IRefreshListener;
 
-public class Activity04 extends Activity implements IRefreshListener{
+public class Activity04 extends BaseActivity implements IRefreshListener{
     private RefreshListView listView;
     private SimpleAdapter simple_adapter;
     private List<Map<String, Object>> list;
@@ -22,6 +23,7 @@ public class Activity04 extends Activity implements IRefreshListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_04);
+        initToolBar(getIntent().getStringExtra("string"),true);
         listView = (RefreshListView) findViewById(R.id.listview);
         iniData();   //初始化数据，我们给它加20条Item
         // 设置SimpleAdapter监听器

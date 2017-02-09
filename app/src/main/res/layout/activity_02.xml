@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
 
     tools:context="com.example.zm.learn.ui.Activity02">
+   <include layout="@layout/toolbar_layout"/>
    <com.example.zm.learn.ulit.SwipeRefreshLayout
        android:id="@+id/swipe_container"
        android:layout_width="match_parent"

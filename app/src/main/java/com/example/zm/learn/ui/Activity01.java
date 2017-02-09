@@ -14,11 +14,12 @@ import android.widget.Toast;
 
 import com.example.zm.learn.R;
 import com.example.zm.learn.adpter.A1_Adapter;
+import com.example.zm.learn.base.BaseActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Activity01 extends AppCompatActivity {
+public class Activity01 extends BaseActivity {
     private RecyclerView mRecyclerView;
     private SwipeRefreshLayout mSwipeRefreshWidget;
     private List<String> mDatas;
@@ -30,6 +31,7 @@ public class Activity01 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_01);
+        initToolBar(getIntent().getStringExtra("string"),true);
         initData();
         mRecyclerView = (RecyclerView) findViewById(R.id.id_recyclerview);
 

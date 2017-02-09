@@ -10,14 +10,16 @@ import android.widget.DatePicker;
 import android.widget.TimePicker;
 
 import com.example.zm.learn.R;
+import com.example.zm.learn.base.BaseActivity;
 
 
-public class Activity03 extends AppCompatActivity {
+public class Activity03 extends BaseActivity {
     private  String ymd,hm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_03);
+        initToolBar(getIntent().getStringExtra("string"),true);
     }
 
 

@@ -9,9 +9,10 @@ import android.webkit.WebViewClient;
 import android.widget.TextView;
 
 import com.example.zm.learn.R;
+import com.example.zm.learn.base.BaseActivity;
 import com.example.zm.learn.ulit.SwipeRefreshLayout;
 
-public class Activity02 extends AppCompatActivity implements
+public class Activity02 extends BaseActivity implements
         SwipeRefreshLayout.OnRefreshListener {
     private SwipeRefreshLayout mSwipeLayout;
     private WebView mPage;
@@ -21,6 +22,7 @@ public class Activity02 extends AppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_02);
+        initToolBar(getIntent().getStringExtra("string"),true);
         mSwipeLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
         mPage = (WebView) findViewById(R.id.page);
         mHint = (TextView) findViewById(R.id.hint);

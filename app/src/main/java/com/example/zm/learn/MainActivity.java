@@ -43,11 +43,11 @@ public class MainActivity  extends BaseActivity {
 
     private void ddd() {
         initData("刷新",new Activity01());
-        initData("",new Activity02());
+        initData("刷新",new Activity02());
         initData("时间选择",new Activity03());
-        initData("",new Activity04());
-        initData("",new Activity05());
-        initData("",new Activity06());
+        initData("仿QQ刷新",new Activity04());
+        initData("仿淘宝竖滑广告条",new Activity05());
+        initData("ViewFlipper实现轮播",new Activity06());
         initData("",new Activity07());
         initData("",new Activity08());
         initData("",new Activity09());

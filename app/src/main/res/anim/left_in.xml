@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--alpha (透明变化) translate(位置移动) scale(缩放) rotate(旋转), 而左右滑动切换使用的是 translate(位置移动)的效果-->
+    <!--android:duration: 动画运行时间，定义在多次时间（ms）内完成动画-->
+    <!--android:startOffset: 延迟一定时间后运行动画-->
+    <!--fromXDelta: X轴方向开始位置，可以是%，也可以是具体的像素 具体见图-->
+    <!--toXDelta:   X轴方向结束位置，可以是%，也可以是具体的像素-->
+    <!--fromYDelta: Y轴方向开始位置，可以是%，也可以是具体的像素-->
+    <!--toYDelta:    Y轴方向结束位置，可以是%，也可以是具体的像素-->
+    <translate
+        android:fromXDelta="100%p"
+        android:toXDelta="0"
+        android:duration="1000" />
+
+    <alpha
+        android:fromAlpha="0"
+        android:toAlpha="1.0"
+        android:duration="1000" />
+    <!--
+        fromAlpha:开始时透明度
+        toAlpha： 结束时透明度
+        duration：动画持续时间 -->
+</set>
